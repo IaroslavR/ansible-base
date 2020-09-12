@@ -3,16 +3,26 @@
   apt:
     name:
       - apt-transport-https
+      - build-essential
       - byobu
       - ca-certificates
+      - curl
       - direnv
       - git
       - htop
       - iotop
+      - libbz2-dev
+      - libncurses5-dev
+      - libreadline-dev
+      - libsqlite3-dev
+      - libssl-dev
+      - llvm
       - lsb-release
       - multitail
       - python3
       - unzip
+      - wget
+      - zlib1g-dev
     state: latest
     update_cache: yes
     cache_valid_time: "{{ cache_valid_time }}"
