@@ -25,3 +25,26 @@
     path: ~/.bashrc
   tags:
     - shell
+
+- name: Add $HOME/.local to path
+  blockinfile:
+    marker: "# {mark} pipx ANSIBLE MANAGED BLOCK"
+    block: |
+      export PATH=$HOME/.local/bin:$PATH
+    path: ~/.bashrc
+  tags:
+    - pipx
+
+- name: Creates ~/.ssh
+  file:
+    path: "{{ ansible_env.HOME }}/.ssh"
+    state: directory
+  tags:
+    - ssh
+
+- name: Create base SSH config file
+  template:
+    src: config
+    dest: "{{ ansible_env.HOME }}/.ssh/config"
+  tags:
+    - ssh
