@@ -1,5 +1,7 @@
 # ansible-base
 
+# Abandoned in favor of https://github.com/IaroslavR/ansible-role-server-bootstrap
+
 ## Table of Contents
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
